@@ -1,0 +1,33 @@
+{
+  "name": "step-im_ik",
+  "version": "1.0.0",
+  "description": "This work was done by Ihor M and Ihor K",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "pro": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/imilay11/sp-forkio/-/tree/main"
+  },
+  "author": "Ihor Milevskyi and Ihor Kacher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/imilay11/sp-forkio/-/issues"
+  },
+  "homepage": "https://gitlab.com/imilay11/sp-forkio",
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.57.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "type": "module"
+}

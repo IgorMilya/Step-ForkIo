@@ -1,0 +1,226 @@
+
+.pricing {
+
+  background: url("../../dist/img/pricingbgi.jpg") no-repeat center;
+  background-size: cover;
+  padding-bottom: 97px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    padding-bottom: 10px;
+  }
+  &__title {
+    @include text(48px, 700, $text-color, 50px, 'Montserrat');
+    position: relative;
+    padding-top: 105px;
+    text-align: center;
+    margin-bottom: 112px;
+    @media screen and (max-width: 992px) {
+      @include text(42px, 700, $text-color, 44px, 'Montserrat');
+
+    }
+    &:before {
+
+      content: "";
+      position: absolute;
+      width: 780px;
+      height: 2px;
+      background: #645766;
+      left:50%;
+      transform:translate(-50%, -50%);
+      top: 17px;
+      @media screen and (max-width: 992px) {
+        width: 552px;
+      }
+      @media screen and (max-width: 768px) {
+        width: 245px;
+      }
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding-top: 23px;
+      margin-bottom: 32px;
+      @include text(28px, 700, $text-color, 42px, 'Montserrat');
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 992px) {
+      gap: 70px 0;
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      gap: 18px 0;
+    }
+  }
+
+  &__item {
+    width: 22%;
+    min-width: 210px;
+    @media screen and (max-width: 992px) {
+      width: 35%;
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 257px;
+    }
+  }
+
+}
+
+
+.tariff {
+
+  &__title {
+    @include text(24px, 400, $text-color, 24px, 'Montserrat');
+
+    background: rgba(255,255,255,0.06);
+    height: 97px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+
+  }
+
+
+  &__price {
+    padding-top: 30px;
+    @include text(60px, 700, $text-color, 90px, 'Montserrat');
+    text-align: center;
+    position: relative;
+    background: rgba(255,255,255,0.11);
+    text-transform: uppercase;
+
+  }
+  &__period {
+    position: relative;
+
+    padding-top: 20px;
+    @include text(14px, 400, $text-color, 16px, 'Montserrat');
+    background: rgba(255,255,255,0.11);
+    padding-bottom: 73px;
+    text-align: center;
+    text-transform: uppercase;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 5px;
+      bottom: 40px;
+      left:50%;
+      transform:translate(-50%, -50%);
+      background: #8D81AC;
+    }
+  }
+
+  &__type {
+    padding-top: 20px;
+    @include text(14px, 400, $text-color, 16px, 'Montserrat');
+    background: rgba(255,255,255,0.11);
+    padding-bottom: 28px;
+    text-align: center;
+    text-transform: uppercase;
+
+  }
+
+  &__button {
+    background: rgba(255,255,255,0.11);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 37px;
+
+  }
+  &__button button {
+    width: 163px;
+    height: 45px;
+    border-color: transparent;
+
+    border-radius: 40px;
+    background: rgba(255,255,255,0.15);
+    @include text(15px, 400, $text-color, 15px, 'Montserrat');
+    text-transform: uppercase;
+    cursor: pointer;
+
+  }
+}
+
+.pricing__item:nth-child(1) .pricing__tariff .tariff__type {
+  line-height: 32px;
+}
+
+
+.pricing__item:nth-child(3) {
+  width: 25%;
+  @media screen and (max-width: 992px) {
+    width: 35%;
+
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 299px;
+  }
+}
+.pricing__item:nth-child(3) .pricing__tariff {
+  background: rgba(	70,48,72,0.84);
+  position: relative;
+  top: -30px;
+
+  width: 100%;
+  @media screen and (max-width: 992px) {
+    width: 110%;
+    top: -40px;
+    left: -26px;
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+.pricing__item:nth-child(3) .pricing__tariff .tariff__title {
+
+  background: rgba(0,0,0,0.1);
+}
+.pricing__item:nth-child(3) .pricing__tariff .tariff__price,
+.pricing__item:nth-child(3) .pricing__tariff .tariff__period,
+.pricing__item:nth-child(3) .pricing__tariff .tariff__type,
+.pricing__item:nth-child(3) .pricing__tariff .tariff__button {
+
+}
+.pricing__item:nth-child(3) .pricing__tariff .tariff__price {
+  padding-top: 14px;
+  @include text(82px, 700, $text-color, 90px, 'Montserrat');
+  text-align: center;
+}
+.pricing__item:nth-child(3) .pricing__tariff .tariff__period {
+  padding-top: 13px;
+  padding-bottom: 91px;
+  @include text(14px, 400, $text-color, 16px, 'Montserrat');
+  text-align: center;
+
+}
+.pricing__item:nth-child(3) .pricing__tariff .tariff__type {
+  padding-top: 16px;
+  padding-bottom: 83px;
+}
+.pricing__item:nth-child(3) .pricing__tariff .tariff__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 56px;
+
+}
+.pricing__item:nth-child(3) .pricing__tariff .tariff__button button {
+  @include text(16px, 400, $text-color, 18px, 'Montserrat');
+  cursor: pointer;
+  width: 190px;
+  height: 52px;
+  border-radius: 40px;
+  border-color: transparent;
+  background-color: rgba(255,255,255,0.15);
+  text-transform: uppercase;
+
+}
+
+

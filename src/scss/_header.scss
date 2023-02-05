@@ -1,0 +1,323 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    background: url("../../dist/img/icon/pen.svg");
+    width: 43px;
+    height: 41px;
+    position: relative;
+  }
+
+  &__hover-icon {
+    background: url("../../dist/img/icon/pen-hover.svg");
+    width: 43px;
+    height: 41px;
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__logo:hover &__hover-icon {
+    opacity: 1;
+  }
+
+  &__title {
+    @include text(24px, 700, $def-color, 16px, "Lato");
+    text-transform: uppercase;
+    margin-left: 17px;
+  }
+
+  &__logo:hover &__title {
+    color: $text-color;
+  }
+
+  &__list {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__list-item {
+    margin-right: 48px;
+    @media screen and (max-width: 536px) {
+      margin-right: 29px;
+    }
+  }
+
+  &__list-link {
+    @include text($def-size, 700, $def-color, 17px, "Montserrat")
+  }
+
+  &__list-link:hover {
+    color: $text-color;
+  }
+
+  &__block-btn {
+    @include text($def-size, 700, $text-color, 17px, "Montserrat");
+    padding: 10px 32px;
+    background: $def-color;
+    border-radius: 40px;
+    cursor: pointer;
+    border: 1px solid $def-color;
+  }
+
+  &__block-btn:hover {
+    color: $def-color;
+    background: $text-color;
+  }
+
+  &__menu {
+    display: none;
+  }
+}
+
+.header {
+  background: url("../../dist/img/background-1.png") no-repeat center;
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 129px;
+
+  &__text-block {
+    text-align: center;
+    margin-top: 83px;
+  }
+
+  &__title {
+    @include text(82px, 700, $text-color, 82px, "Montserrat");
+    margin-bottom: 19px;
+  }
+
+  &__text {
+    @include text(30px, 400, $def-color, 30px, "Lato");
+    margin-bottom: 19px;
+  }
+
+  &__subtext {
+    @include text($def-size, 400, $sub-title, 16px, "Montserrat");
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: -36px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    @include text(21px, 700, $text-color, 22px, "Montserrat");
+    background: $def-color;
+    border-radius: 40px;
+    cursor: pointer;
+    padding: 23px 0;
+    width: 387px;
+    max-width: 100%;
+    border: 2px solid $def-color;
+  }
+
+  &__btn:hover {
+    color: $def-color;
+    background: $text-color;
+  }
+
+  &__sub-btn {
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    @include text($description-size, 400, $sub-title, 15px, "Montserrat");
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .header {
+    &__text-block {
+      margin-top: 69px;
+    }
+
+    &__title {
+      font-size: 72px;
+      line-height: 72px;
+    }
+
+    &__text {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    &__subtext {
+      font-size: $description-size;
+    }
+  }
+
+  .navbar {
+    background: #27262A;
+    flex-wrap: wrap;
+    padding-top: 22px;
+    padding-bottom: 14px;
+
+    &__list {
+      width: 100%;
+      justify-content: center;
+      order: 3;
+      margin-top: 20px;
+    }
+
+    &__list-item:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .header {
+    margin-bottom: 122px;
+
+    &__text-block {
+      margin-top: 50px;
+    }
+
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    &__text {
+      font-size: 18px;
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 14px;
+    }
+
+    &__btn {
+      padding: 13px 0;
+      bottom: -24px;
+    }
+
+    &__sub-btn {
+      bottom: -52px;
+    }
+  }
+
+  .navbar {
+    padding-top: 32px;
+    padding-bottom: 30px;
+    position: relative;
+
+    &__list {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 82px;
+      transform: translate(-50%, 0);
+      background: #333333;
+      width: 292px;
+    }
+
+    &__list-item {
+      padding: 29px 0 21px 35px;
+      margin: 0;
+      border-bottom: 3px solid #3B3B3B;
+      position: relative;
+    }
+
+    &__list-item:before {
+      content: "";
+      position: absolute;
+      background: $def-color;
+      height: 53px;
+      width: 8px;
+      top: 13px;
+      left: 0;
+      transform: scaleX(0);
+    }
+
+    &__list-item:active {
+      padding-left: 39px;
+    }
+
+    &__list-item:active &__list-link {
+      color: $def-color;
+    }
+
+    &__list-item:active:before {
+      transform: scaleX(1);
+    }
+
+    &__list-link {
+      @include text(26px, 400, $text-color, 26px, "Montserrat")
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__block-btn {
+      padding: 10px 22px;
+      font-size: 15px;
+    }
+
+    &__menu {
+      display: flex;
+      align-items: center;
+      width: 26px;
+      height: 20px;
+    }
+
+    &__menu-line {
+      width: 26px;
+      height: 3px;
+      background: $text-color;
+      border-radius: 5px;
+      position: relative;
+
+    }
+
+    &__menu-line:before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 3px;
+      background: $text-color;
+      border-radius: 5px;
+      top: -8px;
+      right: 0;
+    }
+
+    &__menu-line:after {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 3px;
+      background: $text-color;
+      border-radius: 5px;
+      bottom: -8px;
+    }
+
+    &__menu-cross {
+      width: 22px;
+      height: 2px;
+      background: $text-color;
+      position: relative;
+      transform: rotate(-45deg);
+    }
+
+    &__menu-cross:before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 2px;
+      background: $text-color;
+      transform: rotate(90deg);
+    }
+  }
+  .opened {
+    display: block;
+  }
+}

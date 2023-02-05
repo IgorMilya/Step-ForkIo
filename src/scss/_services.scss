@@ -1,0 +1,136 @@
+
+.services {
+  background: #F4F4F4;
+
+  &__title {
+    @include text(48px, 700, $def-color, 50px, 'Montserrat');
+    order: 2;
+
+
+    @media screen and (max-width: 1190px) {
+      @include text(39px, 700, $def-color, 38px, 'Montserrat');
+
+    }
+    @media screen and (max-width: 992px) {
+      order: 1;
+      margin-bottom: 50px;
+
+    }
+    @media (min-width: 320px) and (max-width: 490px) {
+      @include text(32px, 700, $def-color, 38px, 'Montserrat');
+      margin-bottom: 36px;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    order: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    @media screen and (max-width: 992px) {
+      order: 2;
+    }
+
+  }
+
+  &__list li {
+    @media screen and (max-width: 992px) {
+      margin-bottom: 60px;
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 38px;
+
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: end;
+    position: relative;
+    right: -10px;
+    order: 3;
+    @media screen and (max-width: 992px) {
+      width: 100%;
+      display: flex;
+      align-items: end;
+      position: relative;
+      right: -10px;
+    }
+  }
+
+  &__img img {
+    width: 100%;
+  }
+}
+
+.list {
+  &__item {
+    display: flex;
+    gap: 23px;
+
+  }
+}
+
+.item {
+  &__img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    width: 80%;
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 100%;
+      text-align: center;
+
+    }
+  }
+}
+
+.content {
+  &__title {
+    @include text(16px, 400, #323232, 21px, 'Montserrat');
+    margin-bottom: 17px;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 2px;
+
+    }
+  }
+
+  &__text {
+    @include text(14px, 400, $sub-title, 21px, 'Montserrat');
+    margin-bottom: 35px;
+    @media (min-width: 320px) and (max-width: 480px) {
+      margin-bottom: 0;
+
+    }
+  }
+}
+
+
+.services .container {
+  padding-top: 95px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  justify-content: center;
+  @media screen and (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,126 @@
+
+.about {
+
+  &__title {
+    text-align: center;
+    @include text(54px, 700, $title-color, 54px, 'Montserrat');
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    @media screen and (max-width: 992px) {
+      @include text(42px, 700, $title-color, 42px, 'Montserrat');
+      margin-bottom: 33px;
+
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      @include text(26px, 700, $title-color, 28px, 'Montserrat');
+      margin-bottom: 27px;
+
+    }
+  }
+
+
+  &__subtitle {
+    display: block;
+    max-width: 861px;
+    text-align: center;
+
+    @include text(21px, 400, #323232, 32px, 'Lato');
+    margin: 0 auto 13px auto;
+
+    @media screen and (max-width: 992px) {
+      margin-bottom: 24px;
+
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      @include text(14px, 400, #323232, 20px, 'Lato');
+      margin-bottom: 36px;
+
+    }
+  }
+
+
+  &__btn-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    max-width: 360px;
+    margin: 0 auto 70px auto;
+
+    @media screen and (max-width: 992px) {
+      margin-bottom: 98px;
+
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      flex-wrap: wrap;
+      margin-bottom: 88px;
+
+    }
+  }
+
+  &__btn-list li {
+    @media (min-width: 320px) and (max-width: 480px) {
+      &:last-child {
+        margin-top: 15px;
+      }
+
+    }
+
+  }
+}
+
+
+.btn-list {
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid #d1d0d0;
+    background: #F4F4F4;
+    height: 26px;
+    width: 112px;
+    cursor: pointer;
+
+    &:hover {
+      background: #e6e6e6;
+    }
+
+  }
+
+  &__item a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+  }
+}
+
+.item {
+
+
+  &__icon {
+    padding: 0 3px;
+    display: flex;
+    align-items: center;
+  }
+
+
+  &__text {
+    @include text(12px, 700, #323232, 26px, "Montserrat");
+    display: inline-flex;
+
+
+  }
+
+
+  &__counter {
+    @include text(12px, 700, #323232, 26px, "Montserrat");
+    background: #FFFFFF;
+    text-align: center;
+    width: max-content;
+    border-left: 1px solid #d1d0d0;
+    padding: 0 5px;
+  }
+}
